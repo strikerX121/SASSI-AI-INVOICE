@@ -1,0 +1,6 @@
+azure-ai-documentintelligence
+openai
+pandas
+openpyxl
+streamlit
+python-dotenv
