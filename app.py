@@ -1,10 +1,9 @@
 import streamlit as st
 from os.path import exists
 import os
-print(os.getcwd())
 from analyse import analyze_invoice
 
-files = st.file_uploader("Upload Invoices (PDF)", 'pdf', accept_multiple_files=True)
+files = st.file_uploader("Upload Invoices (PDF)", ['pdf','jpg','png','gif', 'tiff', 'bmp'], accept_multiple_files=True)
 analyze = st.button("Analyze")
 
 if analyze:
