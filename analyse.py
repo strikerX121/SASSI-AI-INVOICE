@@ -146,9 +146,13 @@ def analyze_invoice(file):
                     unit_price = item.get("valueObject").get("UnitPrice")
                     if unit_price:
                         details['unit_price'].append(f"{unit_price.get('content')}")
+                    else:
+                        details['unit_price'].append("")
                     amount = item.get("valueObject").get("Amount")
                     if amount:
                         details['amount'].append(amount.get('content'))
+                    else:
+                        details['amount'].append("")
 
                 subtotal = invoice.fields.get("SubTotal")
                 if subtotal:

@@ -18,6 +18,7 @@ if analyze:
         for file in files:
             st.header(f"Invoice: {file.name}")
             details = analyze_invoice(file)
+            print("details: ", details)
             
             file_df = pd.DataFrame({
                 'Category': details['categories'],
