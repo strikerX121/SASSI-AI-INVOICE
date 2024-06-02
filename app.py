@@ -18,7 +18,6 @@ if analyze:
         for file in files:
             st.header(f"Invoice: {file.name}")
             details = analyze_invoice(file)
-            print("details: ", details)
             
             file_df = pd.DataFrame({
                 'Category': details['categories'],
@@ -38,7 +37,7 @@ if analyze:
                         st.write("Category: ", file_df.iloc[i]['Category'])
                     with cols[1]:
                         try:
-                            st.write(details['unit_price'][i-1])  
+                            st.write(details['amount'][i-1])  
                         except (IndexError, KeyError):
                             st.write(file_df.iloc[i]['Price'])
                       
